@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<StackPane id="helpScreen_container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="mm.controller.HelpScreenController">
+   <VBox id="helpScreen_containerVBox">
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+         <VBox layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox>
+               <Label styleClass="helpScreen_sectionLabel" text="About">
+               </Label>
+               <TextFlow fx:id="helpScreen_poemTextContainer" VBox.vgrow="ALWAYS">
+               </TextFlow>
+            </VBox>
+            <VBox>
+               <Label styleClass="helpScreen_sectionLabel" text="Overview">
+               </Label>
+               <TextFlow>
+                  <Text styleClass="helpScreen_sectionText"
+                        text="Start leads you to the Level Selector. Here you can choose one of the few levels and beat them with the given ressources." />
+               </TextFlow>
+               <TextFlow>
+                  <Text styleClass="helpScreen_sectionText"
+                        text="Sandbox leads you to a similar Level Selector. Here you have the additional options of editing the existing levels or making a new level from a blank template at the bottom. Mind that you are prohibited from deleting base game levels. While editing you can build the level via UI or in the JSON preview in the sidebar." />
+               </TextFlow>
+               <TextFlow>
+                  <Text styleClass="helpScreen_sectionText"
+                        text="Options features a few generic setting like sound volume and fullscreen, which is alsco accessible by pressing F11 (or FN + F11 based on the OS/Hardware)."/>
+               </TextFlow>
+            </VBox>
+            <VBox>
+               <Label styleClass="helpScreen_sectionLabel" text="How To Play"/>
+               <Label styleClass="helpScreen_subSections" text="Objects"/>
+                  <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                     <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../sprites/BouncyBall.png"/>
+                     </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Bouncy Ball"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="This is the main Object and your job is to navigate the ball throught the levels." VBox.vgrow="ALWAYS"/>
+                     </TextFlow>
+                  </VBox>
+                  </HBox>
+                  <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                     <HBox spacing="25">
+                        <ImageView fitHeight="50.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                           <Image url="@../sprites/Crate.png"/>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                           <Image url="@../sprites/Domino.png"/>
+                        </ImageView>
+                     </HBox>
+                  <VBox>
+                     <Label styleClass="h2" text="Crates und Dominos"/>
+                      <TextFlow>
+                     <Text styleClass="helpScreen_sectionText" text="These can be moved by applying force. Either by a ball, paddle or anything that moves."/>
+                     </TextFlow>
+                  </VBox>
+                  </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Plank.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Plank"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Planks are static and can be placed in order to control the flow of other dynamic objects like balls."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Balloon.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Balloon"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Balloons can be used to lift other dynamic objects by connecting them together with a rope. "/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Log.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Log"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Logs are static objects. They are shorter than planks."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Blocker.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Blocker"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Hellish orbs that prevent you from placing things. Nothing worse than not being able to place things, in a game about placing things."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitWidth="50.0" fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Paddle.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Paddle"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Paddles are fixed in place but can spin by putting force on them."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0"  fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Bucket.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Bucket"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Buckets can carry balls. Connect them with a balloon and see what happens!"/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/SmallGear.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Gear"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Gears are fixed in place but can be spinned by other gears. There are small gears and big ones."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Lever.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Lever"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Levers can move gears by applying force/weight on them."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../sprites/Motor.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Motor"/>
+                     <TextFlow>
+                        <Text styleClass="helpScreen_sectionText" text="Motors can spin gears and padels."/>
+                     </TextFlow>
+                  </VBox>
+               </HBox>
+               <Label styleClass="helpScreen_subSections" text="Special Objects"/>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true"
+                             preserveRatio="true">
+                     <Image url="@../sprites/Rope.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Rope"/>
+                     <Text styleClass="helpScreen_sectionText" text="Ropes can connect two objects together. Try them with balloons and balls!"/>
+                  </VBox>
+               </HBox>
+               <HBox spacing="45" styleClass="helpScreen_objectVBox">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true"
+                             preserveRatio="true">
+                     <Image url="@../sprites/RubberBand.png"/>
+                  </ImageView>
+                  <VBox>
+                     <Label styleClass="h2" text="Rubberband"/>
+                     <Text styleClass="helpScreen_sectionText" text="Rubberbands can be used to transfer velocity two other paddels."/>
+                  </VBox>
+               </HBox>
+               <Label styleClass="helpScreen_subSections" text="Puzzle Mode"/>
+               <HBox spacing="45">
+                  <TextFlow>
+                     <Text styleClass="helpScreen_sectionText"
+                           text="The Puzzle Mode is where you play the base game levels. Solve the levels by using the given Resources. Your solution didn't work? Rewind the level and set everything back as you placed it. Not satisfied with your approach? Delete with Clear and start over! With Play/Pause you can always stop the game flow whenever you feel like it."
+                           textAlignment="JUSTIFY"/>
+                  </TextFlow>
+                  <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/puzzle_level.PNG"/>
+                  </ImageView>
+               </HBox>
+               <Label styleClass="helpScreen_subSections" text="Sandbox Mode">
+               </Label>
+               <TextFlow>
+                  <Text styleClass="helpScreen_sectionText"
+                        text="In the Sandbox Mode you can live out your creativity. Build your own level by either editing a base game level, or create a new one in the &quot;Create Level&quot; entry in the level selector. Inside the creator itself you have access to all game objects. Set the available ressources of the player inside the level and try them yourself! Satisfied with your creation?  Save it and replay them as often as you like! Or delete them if you want in the selection screen."/>
+               </TextFlow>
+               <HBox spacing="45">
+                  <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/sandbox_selector.PNG"/>
+                  </ImageView>
+                  <ImageView fitHeight="200.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@images/sandbox_editor.PNG"/>
+                  </ImageView>
+               </HBox>
+            </VBox>
+         </VBox>
+      </ScrollPane>
+   </VBox>
+   <Button alignment="CENTER" mnemonicParsing="false" onAction="#backToMenu" text="Back to Menu"
+           StackPane.alignment="BOTTOM_CENTER"/>
+</StackPane>

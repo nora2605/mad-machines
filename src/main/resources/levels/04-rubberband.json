@@ -1,0 +1,91 @@
+{
+  "name" : "rubberband",
+  "description" : "very cool level for testing rubber band mechanics",
+  "objects" : [ {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 1.3282828,
+      "y" : 1.8862876,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 2.3181818,
+      "y" : 0.49665552,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.6919192,
+      "y" : 2.3979933,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Domino",
+    "position" : {
+      "x" : 1.0353535,
+      "y" : 2.1471572,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Domino",
+    "position" : {
+      "x" : 0.8080808,
+      "y" : 2.152174,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Domino",
+    "position" : {
+      "x" : 0.61616164,
+      "y" : 2.1471572,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 2.459596,
+      "y" : 0.8076923,
+      "valid" : true
+    },
+    "rotation" : 30.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "height" : 3.0,
+    "width" : 4.0,
+    "centerY" : 1.5,
+    "centerX" : 2.0
+  },
+  "special" : [ {
+    "type" : "RubberBand",
+    "children" : [ 6, 0 ]
+  } ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+   "Balloon"
+ ]
+}

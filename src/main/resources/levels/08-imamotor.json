@@ -1,0 +1,139 @@
+{
+  "name" : "I am a Motor",
+  "description" : "But what do I move?",
+  "objects" : [ {
+    "type" : "Motor",
+    "position" : {
+      "x" : 0.6060606,
+      "y" : 1.9113712,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.2272727,
+      "y" : 0.61204016,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 1.8939394,
+      "y" : 0.43645486,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 2.1666667,
+      "y" : 0.4214047,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 2.429293,
+      "y" : 0.40635452,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 2.6969697,
+      "y" : 0.4214047,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 3.1717172,
+      "y" : 0.6270903,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BigGear",
+    "position" : {
+      "x" : 3.2525253,
+      "y" : 1.9615384,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BigGear",
+    "position" : {
+      "x" : 2.7525253,
+      "y" : 2.1270902,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.64646465,
+      "y" : 2.132107,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.2474748,
+      "y" : 0.47658864,
+      "valid" : true
+    },
+    "rotation" : 15.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.1363637,
+      "y" : 1.2090302,
+      "valid" : true
+    },
+    "rotation" : 350.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.1161616,
+      "y" : 1.2892977,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "width" : 4.0,
+    "height" : 3.0,
+    "centerX" : 2.0,
+    "centerY" : 1.5
+  },
+  "special" : [ {
+    "type" : "RubberBand",
+    "children" : [ 0, 8 ]
+  } ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+   "RubberBand"
+ ]
+}

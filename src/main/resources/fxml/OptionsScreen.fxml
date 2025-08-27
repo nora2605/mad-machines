@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+
+
+<StackPane fx:id="optionsScreen_container" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mm.controller.OptionsController">
+   <VBox>
+      <Label fx:id="title" text="Options"/>
+      <GridPane fx:id="gridPanel" prefHeight="600" alignment="center" vgap="40" hgap="15" GridPane.columnSpan="2">
+         <Label id="h2" text="Resolution:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+         <CheckBox fx:id="options_fullscreenCheckbox" text="Fullscreen" onAction="#changeFullscreen" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+         <Label id="h2" text="Sound:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+         <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="optionsScreen_imageSound" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true"/>
+            <Slider fx:id="options_VolumeSlider"/>
+         </HBox>
+         <Button text="Go Back" onAction="#returnToMenu" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+      </GridPane>
+      <Label fx:id="creatorsLabel" text="Nora Albrecht, Felix Moeller, Temur Naimat, khut"/>
+   </VBox>
+</StackPane>

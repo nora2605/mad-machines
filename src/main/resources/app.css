@@ -1,0 +1,330 @@
+/*
+    STYLEGUIDE:
+
+        This styleguide defines the rules and structural organisation of the CSS File. For an orderly and well formatted structure which allows all participants
+        to contribute without causing unnecessary confusion and/or unconsistency these rules and regulations are to be followed.
+
+        GENERAL:
+            - App.css contains ALL the CSS for the entire game
+            - fx:id is the controller ID of JavaFX Elements
+            - id is standard CSS
+            - styleClass is used to group into classes
+            - JavaFX Elements can be accessed by lowercasing the Element => ".<ElementName>", e.g .label accesses all labels
+            - "https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html" is the Holy Quran of guides and tutorials
+        
+        1. FX:ID VS ID
+            Set fx:id and id to the same value for less confusion when styling (JavaFX treats them separately, so the is no coi. Keep it simple, stupid!)
+            => keep in mind: already set fx:id's are probably used somewhere! If you change it in the FXML, change the Code where its used!
+                Alternatively: Keep the fx:id as is, only set the id to the specified structure.
+                
+        2. HOW DO I NAME THINGS?
+            An id/fx:id for Elements is structured as follows: <fxml FileName in camelCase>_<Semantic Meaning of the Element>:
+            Example: <VBox fx:id="levelSelect_levelsSection"  id="levelSelect_levelsSection"....</VBox>
+                     => "This VBox contains all the different Levels"
+                     <HBox fx:id="levelSelect_testLevelContainer" id="levelSelect_testLevelContainer" </HBox>
+                     => "This HBox contains the Test Level"
+
+                     The naming hierarchy for groups is.
+                        => section > container > "item"
+
+            "item" is a placehoder for obvious descriptions of single entities (not groups!):
+                id="levelSelect_testLevelName"
+                id="startScreen_startButton"
+                etc.
+
+        3. HOW DO I STRUCTURE MY STYLING?
+            1. If an Element has only one attribute, keep it in one line:
+                DO: 
+                    #startScreen_menuSection {-fx-background-color: gray;}
+
+                DONOT:
+                    #startScreen_menuSection {
+                        -fx-background-color: gray;
+                    }
+
+            2. Structure from top to bottom:
+                #levelSection{}
+                #levelContainer{}
+                #testLevelName{}
+
+            3. Not everything needs a comment, comment only if it is necessary
+
+        4. HOW IS THIS FILE STRUCTURED?
+            We only need a hand full of scenes, therfore this file is structured as follows:
+            1. Start Screen
+            2. Level Selection Screen
+            3. Game Screen
+            4. Options Screen
+            5. Help Screen
+
+*/
+
+/* This keeps throwing loadStylesheetUnPriviliged Errors and I'm starting to loose my McFucking Marbles over it */
+/* 
+    What I've tried:
+        -Loading the Font seperately and applying the styling => font is null, but it gives the correct name via getName()?????
+        -Swapping the Font File (doesn't do shit)
+        -Checking the actual Font name in the ttf vs. font-family (there is a weird Error where font-family has to be the precise font name => nope) 
+        -Loading the Resource in the pom.xml (made it more brokey, dropped that idea)
+
+    SOLUTION:
+        It seems to work on the University hardware, so I have decided to do nothing about it.
+*/
+@font-face { 
+    font-family: "Zero Cool";
+    src: url("fonts/ZeroCool.ttf"); 
+}
+
+.root { 
+    -fx-font-family: "Zero Cool"; 
+}
+
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-pref-width: 125px;
+    -fx-max-width: 150px;
+    -fx-padding: 8px;
+}
+
+#gridPanel {
+    -fx-padding: 0 0 60 0;
+    -fx-text-alignment: center;
+}
+
+#h2 { -fx-font-size: 20px; }
+
+.h2 {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: serif;
+    -fx-padding: 0 0 10 0;
+}
+
+#startScreen_container {
+    -fx-background-image: url("fxml/images/bg_brick.jpg");                            
+    -fx-background-repeat: no-repeat;                          
+    -fx-background-size: 100% 100%;                         
+    -fx-background-position: center center;                          
+}
+
+#startScreen_contentSection {
+    -fx-alignment: center; 
+}
+
+#title {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.4, 0.0, 0.0);
+    -fx-font-size: 110px;
+    -fx-font-weight: bold;
+    -fx-padding: 60 0 0 0;
+}
+
+#creatorsLabel {
+    -fx-text-fill: rgba(40,40,40);
+    -fx-font-size: 12px;
+    -fx-alignment: center;
+    -fx-background-color: rgba(100,100, 100,0.35);
+    -fx-min-width: 1000;
+    -fx-padding: 15; 
+}
+
+#startScreen_buttonSection {
+    -fx-padding: 0 0 60 0;
+    -fx-text-alignment: center;
+}
+
+#helpScreen_container {
+    -fx-padding: 0 0 30 0;
+}
+
+#helpScreen_containerVBox {
+    -fx-padding: 30 40 70 40;
+}
+
+#helpScreen_container ScrollPane {
+    -fx-padding: 15 60 60 60;
+}
+
+#levelSelect_levelsSection HBox {
+    -fx-alignment: center;
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 100.0;
+}
+
+#levelSelect_levelsSection VBox {
+    -fx-alignment: center;
+    -fx-min-height: 200.0;
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 272.0;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+#levelSelect_ScrollPane TextArea {
+    -fx-focus-color: -fx-accent;
+    -fx-faint-focus-color: -fx-control-inner-background ;
+    -fx-pref-height: 150.0;
+    -fx-max-height: 150.0;
+    -fx-pref-width: 400.0;
+}
+
+#levelSelect_levelsSection HBox {
+    -fx-alignment: center;
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 100.0;
+}
+
+#levelSelect_levelsSection VBox {
+    -fx-alignment: center;
+    -fx-min-height: 200.0;
+    -fx-pref-height: 200.0;
+    -fx-pref-width: 272.0;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+#levelSelect_ScrollPane TextArea {
+    -fx-focus-color: -fx-control-inner-background ;
+    -fx-faint-focus-color: -fx-control-inner-background ;
+    -fx-background-color: transparent;
+    -fx-pref-height: 150.0;
+    -fx-max-height: 150.0;
+    -fx-pref-width: 400.0;
+    -fx-border-color: #544234;
+    -fx-border-width: 1px;
+}
+
+#levelSelect_levelsSection {
+    -fx-background-image: url("fxml/images/bg_safety-plate-sky.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+#levelSelect_ScrollPane {
+    -fx-border-color: #544234;
+    -fx-border-width: 8px;
+}
+
+#levelSelect_buttonSection {
+    -fx-background-image: url("fxml/images/bg_menu-metal-frame.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top center;
+    -fx-padding: 50 0 0 0;
+}
+
+#sandBox_buttonSection {
+  -fx-background-image: url("fxml/images/bg_menu-metal-frame.jpg");
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: top center;
+  -fx-padding: 35 0 0 0;
+}
+
+
+#optionsScreen_container {
+    -fx-background-image: url("fxml/images/bg_plate.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center center;
+    -fx-alignment: center;
+}
+
+#blankCanvas {
+    -fx-font-size: 40px;
+}
+
+#blankCanvas Label {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.4, 0.0, 0.0);
+}
+
+#optionsScreen_container {
+    /* -fx-background-image: url("fxml/images/bg_brick.jpg");  */
+    -fx-min-width: 1000;
+    -fx-min-height: 600;
+    -fx-pref-height: 200;
+    -fx-pref-width: 100;
+}
+
+#optionsScreen_container  VBox {
+    -fx-alignment: center;
+}
+
+#options_VolumeSlider {
+    -fx-max-width: 200;
+    -fx-min-width: 200;
+    -fx-padding: 8px;
+}
+
+#optionsScreen_sliderContainer {
+    -fx-alignment: center;
+}
+
+#gameWindow_tabContainer Label {
+    -fx-effect: none;
+    -fx-text-fill: black;
+}
+
+#gameWindow_scrollPaneBlocks {
+    -fx-focus-color: -fx-control-inner-background ;
+    -fx-faint-focus-color: -fx-control-inner-background ;
+}
+
+#gameWindow_buttonSection {
+    -fx-background-image: url("fxml/images/bg_menu-metal-frame-gW.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top center;
+}
+
+#helpScreen_container {
+    -fx-background-image: url("fxml/images/bg_brick.jpg");                            
+    -fx-background-repeat: repeat;                          
+    -fx-background-size: 100% 100%;                         
+    -fx-background-position: center center;
+}
+
+.helpScreen_sectionLabel {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.4, 0.0, 0.0);
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-padding: 35 0 15 305;
+}
+
+.helpScreen_objectVBox {
+    -fx-padding: 0 0 30 0;
+}
+
+.helpScreen_infoContainer {
+    -fx-bottom-margin: 30px;
+}
+
+.helpScreen_sectionText {
+    -fx-line-height: 2.5;
+    -fx-font-family: serif;
+    -fx-font-weight: 300;
+    -fx-font-size: 16px;
+}
+
+.helpScreen_subSections {
+    -fx-font-size: 25px;
+    -fx-padding: 5 0 15 0
+    /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.4, 0.0, 0.0);*/
+}
+
+#helpScreen_poemText {
+    -fx-font-family: serif;
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-fill: grey;
+}
+
+#helpScreen_poemAuthor {
+    -fx-font-family: serif;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+}
+
+
+.lineno {
+    -fx-font-size: 7pt;
+}

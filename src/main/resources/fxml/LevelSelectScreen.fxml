@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="600.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mm.controller.LevelSelectionController">
+    <HBox alignment="CENTER" minHeight="600.0" minWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ScrollPane fx:id="levelSelect_ScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="600" prefWidth="750" styleClass="edge-to-edge" HBox.hgrow="ALWAYS">
+            <VBox fx:id="levelSelect_levelsSection" />
+        </ScrollPane>
+        <VBox id="levelSelect_buttonSection" minHeight="600" minWidth="250">
+            <GridPane alignment="center" vgap="15" GridPane.columnSpan="1">
+                <Button mnemonicParsing="false" onAction="#backToMenu" text="Main Menu" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Button mnemonicParsing="false" onAction="#loadLevel" text="Select" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            </GridPane>
+        </VBox>
+    </HBox>
+</AnchorPane>

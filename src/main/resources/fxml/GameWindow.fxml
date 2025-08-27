@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minHeight="600.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="mm.controller.GameWindow">
+   <SplitPane dividerPositions="0.7982107355864811" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane minHeight="0.0" minWidth="0.0">
+         <Canvas fx:id="mainCanvas" height="600" width="800"/>
+      </AnchorPane>
+      <AnchorPane maxWidth="200.0" minWidth="200.0">
+         <SplitPane dividerPositions="0.31" orientation="VERTICAL" prefHeight="591.0" prefWidth="157.0"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+            <AnchorPane maxHeight="170.0" minHeight="170.0" minWidth="0.0" prefHeight="200.0"
+                        prefWidth="155.0">
+               <VBox id="gameWindow_buttonSection" alignment="CENTER" layoutX="48.0" layoutY="17.0"
+                     prefHeight="150.0" prefWidth="198.0" AnchorPane.bottomAnchor="0.0"
+                     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Button id="gameWindow_playbutton" fx:id="buttonPlay" minWidth="100.0"
+                          mnemonicParsing="false" text="Play"/>
+                  <Button id="gameWindow_playbutton" fx:id="buttonClear" minWidth="100.0"
+                          mnemonicParsing="false" onAction="#clearLevel" text="Clear"/>
+                  <Button fx:id="buttonExit" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#rewindLevel" text="Rewind"/>
+                  <Button fx:id="buttonMenu" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#backToMenu" text="Menu"/>
+               </VBox>
+            </AnchorPane>
+            <AnchorPane fx:id="gameWindow_tabContainer" minWidth="0.0" prefWidth="160.0">
+               <TabPane fx:id="gameWindow_tabPane" prefHeight="476.0" prefWidth="155.0"
+                        tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0"
+                        AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Tab text="Blocks">
+                     <AnchorPane minWidth="155.0" prefHeight="180.0" prefWidth="155.0">
+                        <ScrollPane fx:id="gameWindow_scrollPaneBlocks" fitToHeight="true"
+                                    fitToWidth="true" hbarPolicy="NEVER" prefHeight="414.0"
+                                    prefWidth="200.0" styleClass="edge-to-edge" vbarPolicy="ALWAYS"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <VBox fx:id="gameWindow_VBoxBlocks" minWidth="-Infinity"
+                                 prefWidth="186.0">
+                              <HBox fx:id="Plank" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Plank"/>
+                                    <Label fx:id="gameWindow_plankAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Plank.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Domino" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Domino"/>
+                                    <Label fx:id="gameWindow_dominoAmount" text="0"/>
+                                 </VBox>
+                                 <StackPane maxHeight="-Infinity" maxWidth="-Infinity"
+                                            minWidth="-Infinity" prefHeight="80.0"
+                                            prefWidth="80.0">
+                                    <HBox.margin>
+                                       <Insets/>
+                                    </HBox.margin>
+                                    <ImageView fitHeight="80.0" fitWidth="80.0"
+                                               pickOnBounds="true"
+                                               preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D/>
+                                       </viewport>
+                                       <Image url="@../sprites/Domino.png"/>
+                                    </ImageView>
+                                 </StackPane>
+                              </HBox>
+                              <HBox fx:id="Bucket" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Bucket"/>
+                                    <Label fx:id="gameWindow_bucketAmount" text="0"/>
+                                 </VBox>
+                                 <StackPane maxHeight="-Infinity" maxWidth="-Infinity"
+                                            minWidth="-Infinity" prefHeight="80.0"
+                                            prefWidth="80.0">
+                                    <HBox.margin>
+                                       <Insets/>
+                                    </HBox.margin>
+                                    <ImageView fitHeight="80.0" fitWidth="80.0"
+                                               pickOnBounds="true"
+                                               preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D/>
+                                       </viewport>
+                                       <Image url="@../sprites/Bucket.png"/>
+                                    </ImageView>
+                                 </StackPane>
+                              </HBox>
+                              <HBox fx:id="Crate" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Crate"/>
+                                    <Label fx:id="gameWindow_crateAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Crate.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Log" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Log"/>
+                                    <Label fx:id="gameWindow_logAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Log.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Motor" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Motor"/>
+                                    <Label fx:id="gameWindow_motorAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Motor.png"/>
+                                 </ImageView>
+                              </HBox>
+                           </VBox>
+                        </ScrollPane>
+                     </AnchorPane>
+                  </Tab>
+                  <Tab text="Miscellaneous">
+                     <AnchorPane minWidth="155.0" prefHeight="180.0" prefWidth="198.0">
+                        <ScrollPane fx:id="gameWindow_scrollPaneMiscellaneous" fitToHeight="true"
+                                    fitToWidth="true" hbarPolicy="NEVER" prefHeight="396.0"
+                                    prefWidth="198.0" vbarPolicy="ALWAYS"
+                                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <VBox fx:id="gameWindow_VBoxSpecial" minWidth="-Infinity"
+                                 prefWidth="186.0">
+                              <HBox fx:id="BouncyBall" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Ball"/>
+                                    <Label fx:id="gameWindow_ballAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/BouncyBall.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Balloon" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Balloon"/>
+                                    <Label fx:id="gameWindow_balloonAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Balloon.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Paddle" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Paddle"/>
+                                    <Label fx:id="gameWindow_paddleAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Paddle.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="SmallGear" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Small Gear"/>
+                                    <Label fx:id="gameWindow_smallGearAmount"
+                                           text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/SmallGear.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="BigGear" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Big Gear"/>
+                                    <Label fx:id="gameWindow_bigGearAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/BigGear.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Lever" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Lever"/>
+                                    <Label fx:id="gameWindow_leverAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Lever.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Blocker" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Blocker"/>
+                                    <Label fx:id="gameWindow_blockerAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Blocker.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="Rope" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Rope"/>
+                                    <Label fx:id="gameWindow_ropeAmount" text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/Rope.png"/>
+                                 </ImageView>
+                              </HBox>
+                              <HBox fx:id="RubberBand" alignment="CENTER" prefHeight="100.0"
+                                    prefWidth="186.0">
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND"/>
+                                 </cursor>
+                                 <VBox alignment="CENTER" maxHeight="-Infinity"
+                                       minHeight="-Infinity" prefHeight="100.0"
+                                       prefWidth="80.0">
+                                    <Label text="Rubber Band"/>
+                                    <Label fx:id="gameWindow_rubberBandAmount"
+                                           text="0"/>
+                                 </VBox>
+                                 <ImageView fitHeight="80.0" fitWidth="80.0"
+                                            pickOnBounds="true" preserveRatio="true">
+                                    <Image url="@../sprites/RubberBand.png"/>
+                                 </ImageView>
+                              </HBox>
+                           </VBox>
+                        </ScrollPane>
+                     </AnchorPane>
+                  </Tab>
+               </TabPane>
+            </AnchorPane>
+         </SplitPane>
+      </AnchorPane>
+   </SplitPane>
+</AnchorPane>

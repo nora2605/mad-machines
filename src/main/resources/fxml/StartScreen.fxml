@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?> 
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="startScreen_container" minHeight="600.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mm.controller.StartScreenController">
+   <VBox id="startScreen_contentSection" minHeight="600" prefHeight="634.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label id="title" text="Mad Machines" />
+      <GridPane id="startScreen_buttonSection" alignment="center" prefHeight="600" vgap="15" GridPane.columnSpan="1">
+         <Button onAction="#startGame" text="Start" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <Button onAction="#sandBoxMode" text="Sandbox" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+         <Button onAction="#helpScreen" text="Help" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         <Button onAction="#openOptions" text="Options" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+         <Button onAction="#endGame" text="Close" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+      </GridPane>
+      <Label fx:id="creatorsLabel" text="Nora Albrecht, Felix Moeller, Temur Naimat, khut" />
+   </VBox>
+</AnchorPane>

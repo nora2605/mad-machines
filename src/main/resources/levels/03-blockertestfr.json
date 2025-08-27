@@ -1,0 +1,80 @@
+{
+  "name" : "blocker test fr",
+  "description" : "ts blocker pmo",
+  "objects" : [ {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.7676767,
+      "y" : 0.5367893,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Blocker",
+    "position" : {
+      "x" : 1.7676767,
+      "y" : 1.0735786,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 2.1969697,
+      "y" : 1.3595318,
+      "valid" : true
+    },
+    "rotation" : 350.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 1.9545455,
+      "y" : 1.2040133,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Log",
+    "position" : {
+      "x" : 2.4848485,
+      "y" : 1.1638796,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Log",
+    "position" : {
+      "x" : 1.6919192,
+      "y" : 1.264214,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "centerX" : 2.0,
+    "centerY" : 1.5,
+    "width" : 4.0,
+    "height" : 3.0
+  },
+  "special" : [ ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+   "Balloon"
+ ]
+}

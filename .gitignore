@@ -1,0 +1,9 @@
+# builds
+target/
+
+# maven shade plugin
+dependency-reduced-pom.xml
+
+# IDE
+.vscode
+.idea

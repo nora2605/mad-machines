@@ -1,0 +1,86 @@
+{
+  "name" : "Heavenly Scales",
+  "description" : "What does it take to balance weights in the hands of Iusticia?",
+  "objects" : [ {
+    "type" : "Lever",
+    "position" : {
+      "x" : 1.7727273,
+      "y" : 0.3110368,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Bucket",
+    "position" : {
+      "x" : 1.7676767,
+      "y" : 1.1488295,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 1.7727273,
+      "y" : 1.2341137,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Lever",
+    "position" : {
+      "x" : 2.8737373,
+      "y" : 0.8177258,
+      "valid" : true
+    },
+    "rotation" : 180.0
+  }, {
+    "type" : "BigGear",
+    "position" : {
+      "x" : 2.3888888,
+      "y" : 0.50668895,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Bucket",
+    "position" : {
+      "x" : 2.8838384,
+      "y" : 1.6906354,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "centerY" : 1.5,
+    "centerX" : 2.0,
+    "width" : 4.0,
+    "height" : 3.0
+  },
+  "special" : [ {
+    "type" : "Rope",
+    "children" : [ 0, 1 ]
+  }, {
+    "type" : "Rope",
+    "children" : [ 3, 5 ]
+  } ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+   "Domino"
+ ]
+}

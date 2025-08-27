@@ -1,0 +1,123 @@
+{
+  "name" : "gearbox",
+  "description" : "utmost amazing",
+  "objects" : [ {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.510101,
+      "y" : 2.312709,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Motor",
+    "position" : {
+      "x" : 0.5,
+      "y" : 2.1020067,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "SmallGear",
+    "position" : {
+      "x" : 2.89899,
+      "y" : 1.9765886,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BigGear",
+    "position" : {
+      "x" : 2.439394,
+      "y" : 1.9665552,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BigGear",
+    "position" : {
+      "x" : 3.4646466,
+      "y" : 1.5050167,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "SmallGear",
+    "position" : {
+      "x" : 3.2878788,
+      "y" : 1.0886288,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 1.5909091,
+      "y" : 0.6270903,
+      "valid" : true
+    },
+    "rotation" : 335.0
+  }, {
+    "type" : "BigGear",
+    "position" : {
+      "x" : 2.469697,
+      "y" : 1.264214,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "SmallGear",
+    "position" : {
+      "x" : 2.060606,
+      "y" : 1.2140468,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Crate",
+    "position" : {
+      "x" : 1.6969697,
+      "y" : 0.3361204,
+      "valid" : true
+    },
+    "rotation" : 335.0
+  }, {
+    "type" : "Log",
+    "position" : {
+      "x" : 2.0505052,
+      "y" : 0.5769231,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "width" : 4.0,
+    "height" : 3.0,
+    "centerX" : 2.0,
+    "centerY" : 1.5
+  },
+  "special" : [ ],
+  "winCondition" : {
+    "target" : "Crate",
+    "position" : {
+      "x" : 0.68686867,
+      "y" : 0.90301,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.5,
+      "y" : 0.5,
+      "valid" : true
+    }
+  },
+  "available" : [
+   "RubberBand"
+  , "RubberBand"
+  , "RubberBand"
+  , "RubberBand"
+ ]
+}

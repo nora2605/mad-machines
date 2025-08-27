@@ -1,0 +1,90 @@
+{
+    "name": "Level 2",
+    "description": "I am not a dummy.",
+    "view": {
+        "left": 0,
+        "top": 0,
+        "right": 4,
+        "bottom": 3
+    },
+    "objects": [
+        {
+            "type": "BouncyBall",
+            "position": { "x": 0.5, "y": 1 },
+            "rotation": 0
+        },
+        {
+            "type": "Plank",
+            "position": { "x": 1, "y": 2 },
+            "rotation": 15
+        },
+        {
+            "type": "Plank",
+            "position": { "x": 1.9, "y": 2 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 1.5, "y": 1.75 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 1.8, "y": 1.75 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 2.1, "y": 1.75 },
+            "rotation": 0
+        },
+        {
+            "type": "BouncyBall",
+            "position": { "x": 2.5, "y": 1.4 },
+            "rotation": 0
+        },
+        {
+            "type": "Balloon",
+            "position": { "x": 3, "y": 0.8 },
+            "rotation": 0
+        },
+        {
+            "type": "Plank",
+            "position": { "x": 2.2, "y": 0.2 },
+            "rotation": -4
+        },
+        {
+            "type": "Plank",
+            "position": { "x": 2.7, "y": 1.6 },
+            "rotation": -78
+        },
+        {
+            "type": "Log",
+            "position": { "x": 3.2, "y": 2.2 },
+            "rotation": 0
+        },
+        {
+            "type": "Crate",
+            "position": { "x": 3.25, "y": 1 },
+            "rotation": 0
+        }
+    ],
+    "special": [
+        {
+            "type": "Rope",
+            "children": [6, 7]
+        },
+        {
+            "type": "Rope",
+            "children": [5, 7]
+        }
+    ],
+    "available": [
+        "Crate"
+    ],
+    "winCondition": {
+        "target": "BouncyBall",
+        "position": { "x": 3.1, "y": 0.4 },
+        "size": { "x": 0.5, "y": 0.5 }
+    }
+}

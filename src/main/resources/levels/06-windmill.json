@@ -1,0 +1,100 @@
+{
+  "name" : "windmill",
+  "description" : "be gentle!",
+  "objects" : [ {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 0.6262626,
+      "y" : 2.1371238,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 1.6868687,
+      "y" : 2.3227425,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 3.1262627,
+      "y" : 2.312709,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 3.489899,
+      "y" : 1.4698997,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Paddle",
+    "position" : {
+      "x" : 2.7070706,
+      "y" : 0.6822742,
+      "valid" : true
+    },
+    "rotation" : 25.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 2.6060605,
+      "y" : 0.36622074,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Blocker",
+    "position" : {
+      "x" : 2.060606,
+      "y" : 1.2240803,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "centerX" : 2.0,
+    "centerY" : 1.5,
+    "width" : 4.0,
+    "height" : 3.0
+  },
+  "special" : [ {
+    "type" : "RubberBand",
+    "children" : [ 4, 3 ]
+  }, {
+    "type" : "RubberBand",
+    "children" : [ 0, 1 ]
+  }, {
+    "type" : "RubberBand",
+    "children" : [ 1, 2 ]
+  }, {
+    "type" : "RubberBand",
+    "children" : [ 2, 3 ]
+  } ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+   "Crate"
+ ]
+}

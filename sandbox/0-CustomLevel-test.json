@@ -1,0 +1,71 @@
+{
+  "name" : "test",
+  "description" : "A simple test level.",
+  "objects" : [ {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.5,
+      "y" : 1.0,
+      "valid" : true
+    },
+    "rotation" : 15.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.0,
+      "y" : 1.0,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Domino",
+    "position" : {
+      "x" : 1.050505,
+      "y" : 0.74498326,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Log",
+    "position" : {
+      "x" : 1.6,
+      "y" : 1.1,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 1.3712121,
+      "y" : 0.8102007,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 2.0,
+    "top" : 0.0,
+    "bottom" : 1.5,
+    "width" : 2.0,
+    "height" : 1.5,
+    "centerY" : 0.75,
+    "centerX" : 1.0
+  },
+  "special" : [ ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+ ]
+}

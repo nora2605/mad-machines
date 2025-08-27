@@ -1,0 +1,68 @@
+{
+    "name": "Level 1",
+    "description": "A simple start level.",
+    "view": {
+        "left": 0,
+        "top": 0,
+        "right": 2,
+        "bottom": 1.5
+    },
+    "objects": [
+        {
+            "type": "Plank",
+            "position": { "x": 1.5, "y": 0.45 },
+            "rotation": 3
+        },
+        {
+            "type": "Plank",
+            "position": { "x": 0.8, "y": 0.35 },
+            "rotation": -7
+        },
+        {
+            "type": "Plank",
+            "position": { "x": 1, "y": 1.05 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 0.75, "y": 0.813 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 0.9, "y": 0.813 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 1.05, "y": 0.813 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 1.2, "y": 0.813 },
+            "rotation": 0
+        },
+        {
+            "type": "Domino",
+            "position": { "x": 1.35, "y": 0.813 },
+            "rotation": 0
+        },
+        {
+            "type": "Log",
+            "position": { "x": 0.02, "y": 1.05 },
+            "rotation": 0
+        }
+    ],
+    "special": [
+
+    ],
+    "available": [
+        "BouncyBall"
+    ],
+    "winCondition": {
+        "target": "Domino",
+        "position": { "x": 1.65, "y": 0.85 },
+        "size": { "x": 0.25, "y": 0.25 }
+    }
+}
