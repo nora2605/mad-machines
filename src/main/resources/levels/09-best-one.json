@@ -1,0 +1,215 @@
+{
+  "name" : "The Best One",
+  "description" : "tbo more like pmo — nora",
+  "objects" : [ {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.9749537,
+      "y" : 0.5398887,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.6233766,
+      "y" : 0.71521336,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.5482376,
+      "y" : 1.4276438,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.4768089,
+      "y" : 2.1985157,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.8367347,
+      "y" : 1.7198516,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.0732839,
+      "y" : 1.2217069,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.9833024,
+      "y" : 1.1076066,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.0769944,
+      "y" : 1.4721707,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.8923934,
+      "y" : 1.1799629,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.4693878,
+      "y" : 0.81261593,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.8265307,
+      "y" : 1.0881262,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.0018554,
+      "y" : 1.7198516,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.6131725,
+      "y" : 1.7198516,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.7847867,
+      "y" : 2.2068646,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.3886828,
+      "y" : 2.7745826,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.7309833,
+      "y" : 2.5658627,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 3.3163266,
+      "y" : 1.9202226,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 2.0946198,
+      "y" : 1.538961,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.554731,
+      "y" : 1.1048237,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.69758815,
+      "y" : 0.35343227,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 0.73376626,
+      "y" : -0.0027829313,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "Plank",
+    "position" : {
+      "x" : 1.6270872,
+      "y" : 2.384972,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  }, {
+    "type" : "BouncyBall",
+    "position" : {
+      "x" : 1.2736549,
+      "y" : 0.73191094,
+      "valid" : true
+    },
+    "rotation" : 0.0
+  } ],
+  "view" : {
+    "left" : 0.0,
+    "right" : 4.0,
+    "top" : 0.0,
+    "bottom" : 3.0,
+    "centerX" : 2.0,
+    "centerY" : 1.5,
+    "width" : 4.0,
+    "height" : 3.0
+  },
+  "special" : [ ],
+  "winCondition" : {
+    "target" : "BouncyBall",
+    "position" : {
+      "x" : 1.65,
+      "y" : 0.8,
+      "valid" : true
+    },
+    "size" : {
+      "x" : 0.25,
+      "y" : 0.25,
+      "valid" : true
+    }
+  },
+  "available" : [
+ ]
+}
